@@ -9,7 +9,7 @@
 
 def triplet_sum_brute_force(arr)
   n = arr.length
-  result = []
+  result = Set.new
 
   (0...n).each do |i|
     ((i + 1)...n).each do |j|
@@ -20,7 +20,7 @@ def triplet_sum_brute_force(arr)
       end
     end
   end
-  result.uniq
+  result.to_a
 end
 
 arr = [0, -1, 2, -3, 1]
